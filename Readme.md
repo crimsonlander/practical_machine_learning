@@ -2,5 +2,5 @@
 
 Analysis: analysis.R
 
-For more info follow url: http://crimsonlander.github.io/practical_machine_learning/
+Detailed description of analysis: http://crimsonlander.github.io/practical_machine_learning/
 
