@@ -493,7 +493,7 @@ confusionMatrix(valLabels, predictions)</code></pre>
 <h4>Out of sample error:</h4>
 <p>I have done some kind of bootstrapping by running this script with different seed values:</p>
 <p>100 : 0.9777 accuracy, 101 : 0.9888 accuracy, 102 : 0.9742 accuracy</p>
-<p>It suggests reasonable expectation that error rate should be less than 4%. Doing more serous cross-validation doesn’t seem reasonable to me because it consumes lots of time and shows high accuracy. I think there might be a little overfitting, but this can’t be shown by cross-validation using this data.</p>
+<p>It suggests reasonable expectation that error rate should be less than 4%. Doing more serous cross-validation for this algorithm doesn’t seem reasonable to me because one run consumes lots of time and it shows high accuracy.</p>
 </div>
 <div id="test" class="section level4">
 <h4>Test</h4>
@@ -527,6 +527,7 @@ setwd(&quot;answers&quot;)
 pml_write_files(answers)
 setwd(&quot;..&quot;)</code></pre>
 <p>Hooray! 19 out of 20.</p>
+<p>This page was compiled with this command: rmarkdown::render("analysis.R")</p> 
 </div>
 </div>
 
