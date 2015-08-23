@@ -1,6 +1,6 @@
 #' ---
 #' title: "Practical Machine Learning course project."
-#' author: "Denis Khuzminykh"
+#' author: "Denis Kuzminykh"
 #' date: "August 23, 2015"
 #' ---
 #' 
