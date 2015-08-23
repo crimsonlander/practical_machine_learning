@@ -84,6 +84,12 @@ img {
 <p>I have used Feed-Forward Neural Network with 1 hidden layer of 28 neurons from nnet package. Weight decay have been used for regularization.</p>
 </div>
 </div>
+<div id="out-of-sample-error" class="section level4">
+<h4>Out of sample error:</h4>
+<p>I have done some kind of bootstrapping by running this script with different seed values:</p>
+<p>100 : 0.9777 accuracy, 101 : 0.9888 accuracy, 102 : 0.9742 accuracy</p>
+<p>It suggests reasonable expectation that error rate should be less than 4%. Doing more serous cross-validation for this algorithm doesn’t seem reasonable to me because one run consumes lots of time and it shows high accuracy.</p>
+</div>
 <div id="the-analysis" class="section level3">
 <h3>The analysis:</h3>
 <pre class="r"><code>library(caret); library(nnet)
@@ -489,12 +495,7 @@ confusionMatrix(valLabels, predictions)</code></pre>
 ## Detection Rate         0.2798   0.1841   0.1729   0.1628   0.1780
 ## Detection Prevalence   0.2838   0.1933   0.1750   0.1638   0.1841
 ## Balanced Accuracy      0.9900   0.9836   0.9817   0.9872   0.9851</code></pre>
-<div id="out-of-sample-error" class="section level4">
-<h4>Out of sample error:</h4>
-<p>I have done some kind of bootstrapping by running this script with different seed values:</p>
-<p>100 : 0.9777 accuracy, 101 : 0.9888 accuracy, 102 : 0.9742 accuracy</p>
-<p>It suggests reasonable expectation that error rate should be less than 4%. Doing more serous cross-validation for this algorithm doesn’t seem reasonable to me because one run consumes lots of time and it shows high accuracy.</p>
-</div>
+
 <div id="test" class="section level4">
 <h4>Test</h4>
 <p>Now, lets go to the real test data.</p>
