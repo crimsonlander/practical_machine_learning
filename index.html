@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
-<meta name="author" content="Denis Khuzminykh" />
+<meta name="author" content="Denis Kuzminykh" />
 
 <meta name="date" content="2015-08-23" />
 
@@ -63,7 +63,7 @@ img {
 
 <div id="header">
 <h1 class="title">Practical Machine Learning course project.</h1>
-<h4 class="author"><em>Denis Khuzminykh</em></h4>
+<h4 class="author"><em>Denis Kuzminykh</em></h4>
 <h4 class="date"><em>August 23, 2015</em></h4>
 </div>
 
@@ -96,8 +96,7 @@ set.seed(100)</code></pre>
 <p>Drop row numbers, date, near zero variance features and labels from the data:</p>
 <pre class="r"><code>nzv &lt;- nearZeroVar(d)
 d &lt;- d[, -c(1, 3, 4, 5, 160, nzv)]</code></pre>
-<p>Note: there might be a relation between time and action. I decided not to use it because it would not be very useful in real life HAR problems.</p>
-<p>Turn user_name into a set of dummy variables.</p>
+<p>Note: there might be a relation between time and action. I decided not to use it because it would not be very useful in real life HAR problems.</p><p> Turn user_name into a set of dummy variables.</p>
 <pre class="r"><code>dv = dummyVars(~ user_name, data = d)
 d &lt;- cbind(d, predict(dv, d))
 d$user_name &lt;- NULL</code></pre>
